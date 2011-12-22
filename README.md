@@ -1,4 +1,7 @@
 #AJAX Search Suggest (WeAreHunted.com Style)
+
+Recreate a full viewport search feature similar to the one seen on [WeAreHunted.com](http://wearehunted.com/).
+
 Version 1.0  
 Author: [Ian Lunn](http://www.ianlunn.co.uk/)  
 
