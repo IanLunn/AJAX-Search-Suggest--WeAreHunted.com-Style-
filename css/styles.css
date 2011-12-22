@@ -1,0 +1,142 @@
+/*
+Demo: AJAX Search Suggest (WeAreHunted.com Style)
+Version 1.0
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Demo URL: http://www.ianlunn.co.uk/demos/ajax-search-suggest-wearehunted/
+Tutorial URL: http://www.ianlunn.co.uk/blog/code-tutorials/ajax-search-suggest-wearehunted/
+GitHub: https://github.com/IanLunn/AJAX-Search-Suggest--WeAreHunted.com-Style-/
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*:focus {outline: none;}
+
+body{
+	font-family: 'Play', sans-serif;
+}
+
+a{
+	color: white;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+#search{
+	background: #d3d3d3;
+	cursor: pointer;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 20px 2%;
+	width: 96%;
+}
+
+#search-overlay{
+	background: black;
+	background: rgba(0,0,0,0.85);
+	color: white;
+	display: none;
+	font-size: 24px;
+	height: 100%;
+	padding: 20px;
+	position: fixed;
+	width: 100%;
+}
+
+#display-search{
+	background: none;
+	border: none;
+	color: white;
+	font-size: 60px;
+	margin: 25px 0 0 0;
+	width: 960px;
+}
+
+#hidden-search{
+	left: -10000px;
+	position: absolute;
+}
+
+#results{
+	display: none;
+	width: 300px;
+}
+
+#artists{
+	font-size: 18px;
+	line-height: 125%;
+	padding: 0 0 0 10px;
+}
+
+h2.artists{
+	margin: 30px 0 20px 0;
+}
+
+h2{
+	margin: 0 0 20px 0;
+}
+
+#close{
+	cursor: pointer;
+	position: fixed;
+	right: 20px;
+	top: 20px;
+}
+
+.try{
+	margin: 20px 0 0 60px;
+}

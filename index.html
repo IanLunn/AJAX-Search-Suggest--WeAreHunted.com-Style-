@@ -1,0 +1,69 @@
+<!--
+Demo: AJAX Search Suggest (WeAreHunted.com Style)
+Version 1.0
+Author: Ian Lunn
+Author URL: http://www.ianlunn.co.uk/
+Demo URL: http://www.ianlunn.co.uk/demos/ajax-search-suggest-wearehunted/
+Tutorial URL: http://www.ianlunn.co.uk/blog/code-tutorials/ajax-search-suggest-wearehunted/
+GitHub: https://github.com/IanLunn/AJAX-Search-Suggest--WeAreHunted.com-Style-/
+
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/ajax-search-suggest.js"></script>
+	<script type="text/javascript" src="http://www.ianlunn.co.uk/demo-assets/hire-ian.js"></script> 
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+	<link href="http://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet" type="text/css">
+	<link href="http://www.ianlunn.co.uk/demo-assets/demo-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!--code for the demo overlay and details, not needed for the demo to work-->
+    <div id="demo-details" class="bottom">
+        <div id="demo-links" class="float-left">
+        	<ul>
+            	<li><h1>AJAX Search Suggest (WeAreHunted.com Style)</h1></li>
+            </ul>
+        </div>  
+        <ul id="share">
+            <li class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="IanLunn">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li> 
+            <li class="facebook"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.ianlunn.co.uk%2Fdemos%2Fajax-search-suggest-wearehunted%2F&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></li>
+            <li class="twitter"><g:plusone size="medium"></g:plusone></li>
+            <li><a id="hire" href="http://www.ianlunn.co.uk/" title="Hire Ian Lunn Design"><img src="http://www.ianlunn.co.uk//demo-assets/hire-ian.png" alt="Hire Ian Lunn Design"></a></li>
+        </ul>
+    </div>
+<!--//code for the demo overlay and details, not needed for the demo to work--> 
+
+<div id="search-overlay">
+	<h2>Begin typing to search</h2>
+	<div id="close">X</div>
+	<form>
+		<input id="hidden-search" type="text" autocomplete="off" /> <!--hidden input the user types into-->
+		<input id="display-search" type="text" autocomplete="off" readonly="readonly" /> <!--mirrored input that shows the actual input value-->
+	</form>
+	
+	<div id="results">
+		<h2 class="artists">Artists</h2>
+		<ul id="artists"></ul>
+	</div>
+</div>
+
+<div id="search">
+	Search
+	<img src="images/bt-search.jpg" alt="Search" />
+</div>
+<img class="try" src="images/try-demo.jpg" alt="Click search to try the demo" />
+ 
+ <script type="text/javascript" src="http://apis.google.com/js/plusone.js">
+   {lang: 'en-GB'}
+ </script>
+</body>
+</html>
